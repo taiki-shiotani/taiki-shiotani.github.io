@@ -1155,3 +1155,28 @@ footer {
     font-size: 1.8rem;
   }
 }
+
+
+/* Home banner image */
+.home-page > .home-banner {
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  border-bottom: 3px solid var(--text);
+}
+
+.home-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(210px, 28vw, 360px);
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 760px) {
+  .home-banner img {
+    height: 190px;
+  }
+}
