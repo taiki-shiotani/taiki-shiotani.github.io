@@ -1207,3 +1207,23 @@ footer {
     height: auto;
   }
 }
+
+
+/* Misc photo */
+.misc-photo {
+  margin: 18px 0 0;
+}
+
+.misc-photo img {
+  display: block;
+  width: min(180px, 100%);
+  height: auto;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+.misc-photo figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: .86rem;
+}
