@@ -1355,13 +1355,18 @@ footer {
    Full-width large displays: cap the banner height and crop from the TOP. */
 @media (min-width: 1500px) {
   .home-page > .home-banner {
+    position: relative;
     height: clamp(300px, 20vw, 410px);
     overflow: hidden;
   }
 
   .home-page > .home-banner img {
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    object-fit: contain;
   }
 }
