@@ -1127,3 +1127,31 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Final home/profile sizing */
+.profile-copy h1 {
+  font-size: 2rem;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.editors-suggestion {
+  display: inline-block;
+  margin-left: 8px;
+  padding: 2px 7px;
+  background: var(--accent);
+  color: #fff;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: .02em;
+  white-space: nowrap;
+}
+
+@media (max-width: 760px) {
+  .profile-copy h1 {
+    font-size: 1.8rem;
+  }
+}
