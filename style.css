@@ -1297,3 +1297,31 @@ footer {
   color: var(--muted);
   font-size: .86rem;
 }
+
+
+/* Final page-heading and home-banner fixes */
+.home-page {
+  border-top: 0 !important;
+}
+
+.home-page > .home-banner {
+  margin-top: 0 !important;
+  border-top: 10px solid var(--accent) !important;
+}
+
+.content-page .page-main > .eyebrow {
+  margin: 0 0 34px;
+  padding: 10px 15px;
+  font-size: clamp(1.45rem, 3vw, 2rem);
+  line-height: 1.05;
+  letter-spacing: .08em;
+  font-weight: 900;
+}
+
+@media (max-width: 760px) {
+  .content-page .page-main > .eyebrow {
+    margin-bottom: 24px;
+    padding: 9px 12px;
+    font-size: 1.35rem;
+  }
+}
