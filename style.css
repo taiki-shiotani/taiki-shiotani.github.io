@@ -1328,14 +1328,14 @@ footer {
 
 
 
-/* Fixed-height cropped home banner */
+/* Responsive home banner: full image normally, cropped only on very large displays */
 .home-page > .home-banner {
   width: 100vw;
   max-width: none;
-  height: clamp(180px, 20vw, 280px);
+  height: auto;
   margin-left: calc(50% - 50vw) !important;
   margin-right: calc(50% - 50vw) !important;
-  overflow: hidden;
+  overflow: visible;
   border-top: 10px solid var(--accent) !important;
   border-bottom: 3px solid var(--text);
   background: #fff;
@@ -1344,15 +1344,23 @@ footer {
 .home-page > .home-banner img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: none;
   margin: 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center center;
 }
 
-@media (max-width: 760px) {
+/* Crop only on wide desktop / large external displays */
+@media (min-width: 1600px) {
   .home-page > .home-banner {
-    height: 150px;
+    height: clamp(330px, 20vw, 410px);
+    overflow: hidden;
+  }
+
+  .home-page > .home-banner img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
