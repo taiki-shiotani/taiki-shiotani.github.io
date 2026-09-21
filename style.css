@@ -1048,3 +1048,82 @@ footer {
     aspect-ratio: 1 / 1;
   }
 }
+
+
+/* Compact home navigation and profile refinements */
+.profile-copy h1 {
+  font-size: clamp(2.1rem, 4.2vw, 3.7rem);
+}
+
+.home-nav-grid {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.home-nav-card {
+  min-height: auto;
+  padding: 14px 16px;
+  box-shadow: none;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.home-nav-card:hover {
+  transform: none;
+  box-shadow: none;
+  background: var(--soft);
+}
+
+.home-nav-card .card-kicker {
+  margin: 0;
+  font-size: .72rem;
+}
+
+.home-nav-card h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.misc-grid .mini-card,
+.research-interest-grid .mini-card {
+  min-height: auto;
+  padding: 18px 20px;
+}
+
+.misc-grid .mini-card h2,
+.research-interest-grid .mini-card h3 {
+  margin: 0;
+}
+
+.research-interest-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.personal-name {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin: 14px 0 0;
+  font-size: 1.15rem;
+}
+
+.personal-name strong {
+  font-size: 1.35rem;
+}
+
+.personal-name span {
+  color: var(--muted);
+  font-size: .95rem;
+}
+
+@media (max-width: 820px) {
+  .home-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .research-interest-grid {
+    grid-template-columns: 1fr;
+  }
+}
