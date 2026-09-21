@@ -1157,57 +1157,127 @@ footer {
 }
 
 
-/* Home banner image */
-.home-page > .home-banner {
-  width: 100vw;
-  max-width: none;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  overflow: hidden;
-  border-bottom: 3px solid var(--text);
-}
-
-.home-banner img {
-  display: block;
-  width: 100%;
-  height: clamp(210px, 28vw, 360px);
-  object-fit: cover;
-  object-position: center center;
-}
-
-@media (max-width: 760px) {
-  .home-banner img {
-    height: 190px;
-  }
-}
-
-
-/* Banner crop fix */
+/* Home banner + mobile home layout */
 .home-page {
   padding-top: 0;
 }
 
 .home-page > .home-banner {
-  margin-top: 0;
+  width: 100vw;
+  max-width: none;
+  margin: -1px calc(50% - 50vw) 0;
+  padding: 0;
   line-height: 0;
-  border-top: 0;
+  overflow: visible;
+  border: 0;
+  border-bottom: 3px solid var(--text);
+  background: transparent;
 }
 
 .home-banner img {
   display: block;
   width: 100%;
   height: auto;
-  max-height: none;
+  margin: 0;
+  padding: 0;
   object-fit: contain;
   object-position: center top;
+  vertical-align: top;
 }
 
+/* Smartphone: photo first, profile text directly underneath */
 @media (max-width: 760px) {
+  .home-page {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .home-page > .home-banner {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+  }
+
   .home-banner img {
+    width: 100%;
     height: auto;
   }
-}
 
+  .home-page main {
+    padding-top: 28px;
+  }
+
+  .home-page .profile-hero {
+    display: block;
+    padding: 0 0 30px;
+    border-bottom: 1px solid #b9b9b9;
+  }
+
+  .home-page .profile-photo-wrap {
+    width: min(100%, 360px);
+    min-height: 0;
+    margin: 0 auto 20px;
+    border: 1px solid #b9b9b9;
+    box-shadow: none;
+  }
+
+  .home-page .profile-photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: auto;
+    object-fit: contain;
+  }
+
+  .home-page .profile-copy {
+    display: block;
+    width: 100%;
+  }
+
+  .home-page .profile-copy h1 {
+    margin: 0 0 10px;
+    font-size: 1.65rem;
+    line-height: 1.2;
+  }
+
+  .home-page .profile-position {
+    margin-bottom: 14px;
+    font-size: .94rem;
+  }
+
+  .home-page .profile-intro {
+    font-size: .96rem;
+    line-height: 1.7;
+  }
+
+  .home-page .research-topic-block {
+    margin-top: 20px;
+  }
+
+  .home-page .topic-list {
+    display: block;
+  }
+
+  .home-page .topic-list span,
+  .home-page .topic-list span:nth-child(odd) {
+    display: block;
+    width: fit-content;
+    margin-bottom: 5px;
+  }
+
+  .home-page .home-nav-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .home-page .home-nav-card {
+    padding: 11px 12px;
+  }
+
+  .home-page .home-nav-card h2 {
+    font-size: .92rem;
+  }
+}
 
 /* Misc photo */
 .misc-photo {
