@@ -1328,7 +1328,7 @@ footer {
 
 
 
-/* Responsive home banner: full image normally, cropped only on very large displays */
+/* Responsive home banner: full image normally, crop only when the viewport is truly wide */
 .home-page > .home-banner {
   width: 100vw;
   max-width: none;
@@ -1351,16 +1351,17 @@ footer {
   object-position: center center;
 }
 
-/* Crop only on wide desktop / large external displays */
-@media (min-width: 1600px) {
+/* Half-width / ordinary windows: show the whole image.
+   Full-width large displays: cap the banner height and crop from the TOP. */
+@media (min-width: 1500px) {
   .home-page > .home-banner {
-    height: clamp(330px, 20vw, 410px);
+    height: clamp(300px, 20vw, 410px);
     overflow: hidden;
   }
 
   .home-page > .home-banner img {
     height: 100%;
     object-fit: cover;
-    object-position: center center;
+    object-position: center bottom;
   }
 }
