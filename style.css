@@ -1325,3 +1325,16 @@ footer {
     font-size: 1.35rem;
   }
 }
+
+
+/* Large-display banner size cap */
+.home-page > .home-banner {
+  text-align: center;
+}
+
+.home-page > .home-banner img {
+  width: min(100%, 1280px);
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
