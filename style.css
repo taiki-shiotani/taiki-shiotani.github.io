@@ -1180,3 +1180,30 @@ footer {
     height: 190px;
   }
 }
+
+
+/* Banner crop fix */
+.home-page {
+  padding-top: 0;
+}
+
+.home-page > .home-banner {
+  margin-top: 0;
+  line-height: 0;
+  border-top: 0;
+}
+
+.home-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  object-position: center top;
+}
+
+@media (max-width: 760px) {
+  .home-banner img {
+    height: auto;
+  }
+}
