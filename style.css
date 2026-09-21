@@ -266,21 +266,38 @@ main { padding: 72px 0 64px; }
 
 .publication-list {
   margin-top: 54px;
-  border-top: 1px solid var(--line);
+}
+
+.publication-year-group {
+  margin-top: 42px;
+}
+
+.publication-year-group:first-child {
+  margin-top: 0;
+}
+
+.publication-year-heading {
+  margin: 0;
+  padding: 0 0 10px;
+  border-bottom: 2px solid var(--text);
+  font-size: 1.55rem;
+  letter-spacing: -0.02em;
 }
 
 .publication-item {
   display: grid;
-  grid-template-columns: 72px 1fr;
+  grid-template-columns: 48px 1fr;
   gap: 22px;
-  padding: 28px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--line);
 }
 
-.pub-year {
+.pub-number {
   color: var(--muted);
-  font-size: .9rem;
+  font-size: .95rem;
   font-weight: 800;
+  text-align: right;
+  padding-top: 2px;
 }
 
 .publication-item h2 {
