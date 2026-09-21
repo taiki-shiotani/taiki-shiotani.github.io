@@ -48,6 +48,7 @@ body > * {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 24px;
   flex-wrap: wrap;
 }
@@ -61,6 +62,27 @@ nav a {
 
 nav a:hover {
   color: var(--text);
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-left: 6px;
+  padding-left: 20px;
+  border-left: 1px solid var(--line);
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.lang-switch strong {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.lang-switch a {
+  font-size: 0.9rem;
 }
 
 main {
@@ -181,6 +203,15 @@ body:not(.home-page) h1 {
     flex-direction: column;
     justify-content: center;
     padding: 20px 0;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .lang-switch {
+    margin-left: 0;
+    padding-left: 14px;
   }
 
   main {
