@@ -1377,3 +1377,45 @@ body.home-page > .home-banner img {
   padding-top: 0 !important;
   vertical-align: top;
 }
+
+
+/* Hard fix: remove every visible gap above the home header image */
+html,
+body.home-page {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+body.home-page {
+  border-top: 0 !important;
+}
+
+body.home-page > .home-banner {
+  position: relative;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+  overflow: hidden;
+}
+
+/* Keep the red top rule without creating layout space */
+body.home-page > .home-banner::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--accent);
+  pointer-events: none;
+}
+
+body.home-page > .home-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: -2px 0 0 !important;
+  padding: 0 !important;
+  vertical-align: top;
+}
