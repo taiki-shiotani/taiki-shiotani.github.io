@@ -1350,3 +1350,30 @@ footer {
   object-fit: contain;
   object-position: center center;
 }
+
+
+/* Final top-edge fix: no gap above the home banner */
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body.home-page {
+  margin: 0 !important;
+  padding-top: 0 !important;
+  border-top: 10px solid var(--accent) !important;
+}
+
+body.home-page > .home-banner {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  border-top: 0 !important;
+  line-height: 0;
+}
+
+body.home-page > .home-banner img {
+  display: block;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  vertical-align: top;
+}
